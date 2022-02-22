@@ -2,8 +2,13 @@
 
 void main(void)
 {
-	int a=6,b=0,c;
-	printf("Hola mundo");
-	c=a/b;
-	printf("La division entre de %d con %d es %d",a,b,c); //%i, %d
+	int a=6;			//%d %i
+	char simbolo='@';	//%c	
+	float pi=3.141592;	//%f
+	
+	printf("\tHola mundo!\n");
+	printf("%d\n",a);
+	printf("%c\n",simbolo);
+	printf("%d\n",pi);
+
 }
