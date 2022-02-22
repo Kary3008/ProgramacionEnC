@@ -9,6 +9,8 @@ void main(void)
 	printf("\tHola mundo!\n");
 	printf("%d\n",a);
 	printf("%c\n",simbolo);
-	printf("%d\n",pi);
+	printf("%f\n",pi);
+	
+	printf("%f,%c,%d",pi,simbolo,a);
 
 }
