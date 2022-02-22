@@ -12,5 +12,8 @@ void main(void)
 	printf("%f\n",pi);
 	
 	printf("%f,%c,%d",pi,simbolo,a);
+	
+	a=printf("12345\n");
+	printf("A vale %d",a);
 
 }
