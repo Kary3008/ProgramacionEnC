@@ -8,11 +8,11 @@
 */
 #include<stdio.h>
 #include<stdlib.h>
+#include<math.h>
 
 void main(void){
-	int numero;
-	printf("\tMENU\n");
-	printf("Digite un numero entre (1-17): \n");
+	int numero, a=0, b, c, d=0, m, y2, y1, x2, x1;
+	printf("\tMENU\n\n");
 	printf("1. a=b*c\n");
 	printf("2. d=(b^2)-4*(a*c) \n");
 	printf("3. m=(y2-y1)/(x2-x1) \n");
@@ -30,13 +30,28 @@ void main(void){
 	printf("15. (x*y)/(m*n) \n");
 	printf("16. ((x+y)^2)*(a-b) \n");
 	printf("17. F and V and F or V \n");
-	printf("18. F and (F or V) and F or F \n");
+	printf("18. F and (F or V) and F or F \n\n");
+	printf("Digite un numero entre (1-17): \n");
 	scanf("%i",&numero);
 	
 	switch(numero){
 		case 1: printf("\n 1. Resolver a=b*c \n");
+				printf("Digite b: ");
+				scanf("%i", &b);
+				printf("Digite c: ");
+				scanf("%i", &c);
+				a=b*c;
+				printf("La variable a es igual a: %i", a);
 		break;
 		case 2: printf("\n 2. Resolver d=(b^2)-4*(a*c) \n");
+				printf("Digite a: ");
+				scanf("%i", &a);
+				printf("Digite b: ");
+				scanf("%i", &b);
+				printf("Digite c: ");
+				scanf("%i", &c);
+				d= (b*b)-4*(a*c);
+				printf("La variable d es igual a: %i", d);
 		break;
 		case 3: printf("\n 3. Resolver m=(y2-y1)/(x2-x1) \n");
 		break;
