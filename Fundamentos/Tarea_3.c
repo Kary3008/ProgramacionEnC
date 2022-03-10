@@ -10,8 +10,8 @@ void main(void){
 	int answer;
 	
 	do{
-		int numero;
-	float a=0, b=0, c=0, d=0, m=0, y2=0, y1=0, x2=0, x1=0;
+		int numero,g;
+	float a=0, b=0, c=0, d=0, m=0, y2=0, y1=0, x2=0, x1=0,v,f;
 	printf("\tMENU\n\n");
 	printf("1. a=b*c\n");
 	printf("2. d=(b^2)-4*(a*c) \n");
@@ -73,7 +73,7 @@ void main(void){
 				printf("Digite z: \n");
 				scanf("%f",&c);
 				d=a+b-c;
-				printf("El resultado es: %.2f",d);
+				printf("El resultado de i: %.2f",d);
 		break;
 		case 5: printf("\n 5. Resolver j=(x+y)/(z+w) \n");
 				printf("Digite x: \n");
@@ -170,12 +170,53 @@ void main(void){
 				printf("El resultado es: %.2f",d);
 		break;
 		case 15: printf("\n 15. Resolver (x*y)/(m*n) \n");
+				printf("Digite x: \n");
+				scanf("%f",&a);
+				printf("Digite y: \n");
+				scanf("%f",&b);
+				printf("Digite m: \n");
+				scanf("%f",&c);
+				printf("Digite n: \n");
+				scanf("%f",&d);
+				m=(a*b)/(c*d);
+				printf("El resultado es: %.2f",m);
 		break;
 		case 16: printf("\n 16. Resolver ((x+y)^2)*(a-b) \n");
+				printf("Digite a: \n");
+				scanf("%f",&a);
+				printf("Digite b: \n");
+				scanf("%f",&b);
+				printf("Digite x: \n");
+				scanf("%f",&c);
+				printf("Digite y: \n");
+				scanf("%f",&d);
+				m=((c+d)*(c+d))*(a-b);
+				printf("El resultado es: %.2f",m);
 		break;
-		case 17: printf("\n 17. Resolver F and V and F or V \n");
+		case 17: printf("\n 17. Resolver F and V and F or V \n"); //F & V & F || V
+				printf("Dale un valor a f:\n");
+				scanf("%f",&f);
+				printf("\nDale un valor a v:\n");
+				scanf("%f",&v);
+				printf("\nf= %.2f y v=%.2f \nQue valor quieres? \n1) F \n2) V\n",f,v);
+				scanf("%d",&g); //que valor quieres? guarda el valor 1 o 2
+				if (g==1)
+				{
+					printf ("\nF= %.2f",f);
+				}
+				else if (g==2)
+				{
+					printf("\nV=%.2f",v);
+				}
+				else
+				printf("\nEse valor no existe");
 		break;
-		case 18: printf("\n 18. Resolver F and (F or V) and F or F \n");
+		case 18: printf("\n 18. Resolver F and (F or V) and F or F \n"); //F & (F || V) & F || F
+				printf("Digite un valor  V o F: \n");
+				if(f || v)
+				{
+					printf("Es verdadero");
+				}
 		break;
 		default: printf("No ha digitado un numero del menu");
 		}	
