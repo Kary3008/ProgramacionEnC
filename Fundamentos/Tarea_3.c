@@ -10,6 +10,7 @@ void main(void){
 	int answer;
 	
 	do{
+		//Se introduce un switch case
 		int numero,g;
 	float a=0, b=0, c=0, d=0, m=0, y2=0, y1=0, x2=0, x1=0;
 	printf("\tMENU\n\n");
@@ -191,13 +192,14 @@ void main(void){
 				m=((c+d)*(c+d))*(a-b);
 				printf("El resultado es: %.2f",m);
 		break;
+		//Sino ha seleccionado un  número del 1 al 16 imprime el mensaje.
 		default: printf("No ha digitado un numero del menu");
 		}	
-		
+		//Do while
 		printf ("\n\nDeseas volver a ver el menu?\n");
 		printf ("Presiona 1 para continuar, sino presiona 2 para salir:\n\n");
 		scanf ("%d",&answer);	
 	}
-	
+	//Si answer es igual a 1 continua ejecutando el menú, de lo contrario finaliza el programa.
 	while(answer==1);
 }
