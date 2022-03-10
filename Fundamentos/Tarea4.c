@@ -30,8 +30,17 @@ void main(void){
 		//Se introduce un switch case
 		switch(num) 
 		{
-			case 1: printf("\n\t 1. \n");
-			
+			case 1: printf("\n\tOrden Inverso\n");
+					printf("Al recibir los datos A, B, C y D que representan numeros enteros,\nescriba los mismos en orden inverso.\n");
+					printf("Digite el valor de A: \n");
+					scanf("%i",&a);
+					printf("Digite el valor de B: \n");
+					scanf("%i",&b);
+					printf("Digite el valor de C: \n");
+					scanf("%i",&c);
+					printf("Digite el valor de D: \n");
+					scanf("%i",&d);
+					printf("%i %i %i %i", d, c, b, a);	
 			break;
 			case 2: printf("\n\tTarea 2\n");
 			
