@@ -19,7 +19,7 @@ void main(void){
 	do {
 		//Inicia el menu
 		int num, a, b, c, d, cla;
-		float su1, su2, su3, su4, su5, su6, ing, pm, bas, alt, sup, pie, lib;
+		float su1, su2, su3, su4, su5, su6, ing, pm, bas, alt, sup, pie, lib, rad, vol, pi=3.1416;
 			printf("\tMENU\n\n");
 			printf("1. Ejercicio 1: Orden Inverso\n");
 			printf("2. Ejercicio 2  \n");
@@ -92,11 +92,22 @@ void main(void){
 					pie=pie*0.3048;
 					//1 libra= 0.4536 kg.
 					lib=lib*0.4536;
-					printf("La longitud del objeto en metros es: %.4f\n",pie);
-					printf("El peso del objeto en libras es: %.4f\n",lib);
+					printf("La longitud del objeto en metros es: %.4f m.\n",pie);
+					printf("El peso del objeto en kilogramos es: %.4f kg.\n",lib);
 			break;
-			case 5: printf("\n\tTarea 5\n");
-			
+			case 5: printf("\n\tArea y volumen de un cilindro.\n");
+					printf("Al recibir como datos el radio y la altura de un cilindro,\ncalcule e imprima el area y su volumen.\n");
+					//rad, alt, vol, pi=3.1416, sup=area -> float
+					printf("Digite el radio del cilindro: \n");
+					scanf("%f",&rad);
+					printf("Digite la altura del cilindro: \n");
+					scanf("%f",&alt);
+					//volumen= (pi*(radio^2))*altura
+					vol=(pi*(rad*rad))*alt;
+					//area = 2(pi*radio*altura)+2(pi*(radio^2))
+					sup=2*(pi*rad*alt)+2*(pi*(rad*rad));
+					printf("El volumen del cilindro es: %.4f\n",vol);
+					printf("El area del cilindro es: %.4f\n", sup);
 			break;		
 			
 		//Sino ha seleccionado un  número del 1 al 16 imprime el mensaje.	
