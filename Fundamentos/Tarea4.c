@@ -13,14 +13,38 @@
 
 	para los ejercicios de las láminas 36 a 40
 */
-
+#include<stdio.h>
 void main(void){
 	int answer; 
 	do {
+		//Inicia el menu
+		int num, a, b, c, d, e;
+			printf("\tMENU\n\n");
+			printf("1. Ejercicio 1: Orden Inverso\n");
+			printf("2. Ejercicio 2  \n");
+			printf("3. Ejercicio 3 \n");
+			printf("4. Ejercicio 4 \n");
+			printf("5. Ejercicio 5 \n");
+			printf("Digite una opción entre el 1 al 5: \n");
+			scanf("%i",&num);
 		//Se introduce un switch case
-		switch() 
+		switch(num) 
 		{
+			case 1: printf("\n\t 1. \n");
 			
+			break;
+			case 2: printf("\n\tTarea 2\n");
+			
+			break;
+			case 3: printf("\n\tTarea 3\n");
+			
+			break;
+			case 4: printf("\n\tTarea 4\n");
+			
+			break;
+			case 5: printf("\n\tTarea 5\n");
+			
+			break;		
 			
 		//Sino ha seleccionado un  número del 1 al 16 imprime el mensaje.	
 		default: printf("No ha digitado un numero del menu");
