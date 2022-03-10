@@ -19,7 +19,7 @@ void main(void){
 	do {
 		//Inicia el menu
 		int num, a, b, c, d, cla;
-		float su1, su2, su3, su4, su5, su6, ing, pm;
+		float su1, su2, su3, su4, su5, su6, ing, pm, bas, alt, sup;
 			printf("\tMENU\n\n");
 			printf("1. Ejercicio 1: Orden Inverso\n");
 			printf("2. Ejercicio 2  \n");
@@ -70,11 +70,16 @@ void main(void){
 					printf("Ingreso total semestral: $%.2f\n", ing);
 					//promedio mensual
 					pm= ing/6;
-					printf("Promedio mensual: %.2f\n", pm);
-					
+					printf("Promedio mensual: %.2f\n", pm);				
 			break;
-			case 3: printf("\n\tTarea 3\n");
-			
+			case 3: printf("\n\tSuperficie de un triangulo.\n");
+					printf("Al recibir como datos la base y la altura de un triangulo,\ncalcule su superficie.\n");
+					printf("Digite la base del triangulo: \n");
+					scanf("%f",&bas);
+					printf("Digite la altura del triangulo: \n");
+					scanf("%f",&alt);
+					sup=(bas*alt)/2;
+					printf ("La superficie del triangulo es: %.2f", sup);			
 			break;
 			case 4: printf("\n\tTarea 4\n");
 			
