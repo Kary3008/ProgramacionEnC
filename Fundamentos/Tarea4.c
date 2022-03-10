@@ -19,7 +19,7 @@ void main(void){
 	do {
 		//Inicia el menu
 		int num, a, b, c, d, cla;
-		float su1, su2, su3, su4, su5, su6, ing, pm, bas, alt, sup;
+		float su1, su2, su3, su4, su5, su6, ing, pm, bas, alt, sup, pie, lib;
 			printf("\tMENU\n\n");
 			printf("1. Ejercicio 1: Orden Inverso\n");
 			printf("2. Ejercicio 2  \n");
@@ -33,7 +33,7 @@ void main(void){
 		{
 			case 1: printf("\n\tOrden Inverso\n");
 					printf("Al recibir los datos A, B, C y D que representan numeros enteros,\nescriba los mismos en orden inverso.\n");
-					printf("Digite el valor de A: \n");
+					printf("\nDigite el valor de A: \n");
 					scanf("%i",&a);
 					printf("Digite el valor de B: \n");
 					scanf("%i",&b);
@@ -49,7 +49,7 @@ void main(void){
 					clave del empleado: cla -> int
 					6 sueldos del año: su1, su2, su3, su4, su5, su6 ->float.
 					*/
-					printf("Clave del empleado: ");
+					printf("\nClave del empleado: ");
 					scanf("%i",&cla);
 					printf("Digite su primer sueldo del an¬o: \n");
 					scanf("%f",&su1);
@@ -74,15 +74,26 @@ void main(void){
 			break;
 			case 3: printf("\n\tSuperficie de un triangulo.\n");
 					printf("Al recibir como datos la base y la altura de un triangulo,\ncalcule su superficie.\n");
-					printf("Digite la base del triangulo: \n");
+					printf("\nDigite la base del triangulo: \n");
 					scanf("%f",&bas);
 					printf("Digite la altura del triangulo: \n");
 					scanf("%f",&alt);
 					sup=(bas*alt)/2;
 					printf ("La superficie del triangulo es: %.2f", sup);			
 			break;
-			case 4: printf("\n\tTarea 4\n");
-			
+			case 4: printf("\n\tLongitud y peso\n");
+					printf("Al recibir como datos la longitud y el peso de un objeto\nexpresado en pies y libras, imprima los datos de este\nobjeto pero expresados en metros y kilos, respectivamente.");
+					//longitud y peso en pies y libras	
+					printf("\n\nIntroduzca la longitud del objeto en pies: \n");
+					scanf("%f",&pie);
+					printf("Introduzca el peso del objeto en libras: \n");
+					scanf("%f",&lib);
+					//1 pie = 0.3048 metros.
+					pie=pie*0.3048;
+					//1 libra= 0.4536 kg.
+					lib=lib*0.4536;
+					printf("La longitud del objeto en metros es: %.4f\n",pie);
+					printf("El peso del objeto en libras es: %.4f\n",lib);
 			break;
 			case 5: printf("\n\tTarea 5\n");
 			
