@@ -1,3 +1,11 @@
+/*
+	Name: Estructura If Else
+	Copyright: @KarydNa9
+	Author: Bautista Bautista Karina
+	Date: 10/03/22 19:34
+	Description:  Llenar el código fuente de acuerdo al diagrama de flujo. 
+*/
+
 #include<stdio.h>
 void main(void){
 	int a, b, c;

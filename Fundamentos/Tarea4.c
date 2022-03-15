@@ -10,16 +10,15 @@
               Diagrama de Flujo
               Pseudocódigo
               Código en C
-
-	para los ejercicios de las láminas 36 a 40
 */
 #include<stdio.h>
 void main(void){
 	int answer; 
+	int num, a, b, c, d, cla;
+	float su1, su2, su3, su4, su5, su6, ing, pm, bas, alt, sup, pie, lib, rad, vol, pi=3.1416;
+	//Inicia do while
 	do {
 		//Inicia el menu
-		int num, a, b, c, d, cla;
-		float su1, su2, su3, su4, su5, su6, ing, pm, bas, alt, sup, pie, lib, rad, vol, pi=3.1416;
 			printf("\tMENU\n\n");
 			printf("1. Ejercicio 1: Orden Inverso\n");
 			printf("2. Ejercicio 2  \n");
