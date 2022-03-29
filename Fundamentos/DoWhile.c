@@ -1,3 +1,11 @@
+/*
+	Name: DO WHILE	
+	Copyright: @KarydNa9
+	Author: Bautista Bautista Karina
+	Date: 28/03/22 19:45
+	Description: Ejemplo en Do While.
+*/
+
 #include<stdio.h>
 
 void main(void)
