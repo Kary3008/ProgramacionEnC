@@ -18,14 +18,5 @@ void main(void){
 		printf("%d\n",num);
 		num++;	
 	}
-	
-	//segunda secuencia
-	int nu=1;
 		
-	while(nu<=20)
-	{
-		printf("%d\n",nu);
-		num++;	
-	}
-	
 }
