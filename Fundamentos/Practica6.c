@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
+void main(void){
     float a, b, x;
     printf("Sabiendo que una ecuacion de primer grado es 'ax + b = 0'\n");
     printf("Dame el valor de a: ");
@@ -12,9 +12,10 @@ int main(){
         x = -(b/a);
         printf("El resultado es: %f \n", x);
     }
-    if(a==0 && b>0)
-        printf("Solucion imposible\n");
-    if(a==0 && b==0)
-        printf("Solucion indeterminada\n");
-    return 0;
+    if(a==0)
+    	if(b>0)
+        	printf("Solucion imposible\n");
+    if(a==0)
+    	if(b==0)
+        	printf("Solucion indeterminada\n");
 }
