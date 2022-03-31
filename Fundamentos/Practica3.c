@@ -10,28 +10,16 @@ int main()
     printf("\nc) ");
     scanf("%d",&c);
     if (a<b && a<c && b<c)
-    {
-        printf("\nTus valores estan ordenados");
-    }
+        printf("\nTus valores estan ordenados");   
     if (b<a && b<c && a<c)
-    {
-        printf("\nTus valores tienen el oden b a c");
-    }
+        printf("\nTus valores tienen el orden b a c");
     if (c<a && c<b && a<b)
-    {
         printf("\nTus valores tienen el orden c a b");
-    }
     if (b<c && b<a && c<a)
-    {
-        printf("\nTus valores tienen el oden b c a");
-    }
+        printf("\nTus valores tienen el orden b c a");
     if (a<c && a<b && c<b)
-    {
-        printf("\nTus valores tienen el oden a c b");
-    }
+        printf("\nTus valores tienen el orden a c b");
     if (c<b && c<a && b<a)
-    {
-        printf("\nTus valores tienen el oden c b a");
-    }
+        printf("\nTus valores tienen el orden c b a");
     return 0;
 }
