@@ -9,12 +9,15 @@ void main(void){
 	scanf(" %c",&b);
 	printf("Ingresa la tercera letra: ");
 	scanf(" %c",&c);
-		if(a<b && a<c)
+		if(a<b)
+			if(a<c)
 			letra = a;
-			if(b<a && b<c)
-				letra = b;
-				if(c<b && c<a)
-					letra = c;
+				if(b<a)
+					if(b<c)
+						letra = b;
+						if(c<b)
+							if(c<a)
+								letra = c;
 		printf("La letra que va primero del alfabeto es: %c",letra);
 		
 }
