@@ -12,12 +12,12 @@ void main(void){
 		if(a<b)
 			if(a<c)
 			letra = a;
-				if(b<a)
-					if(b<c)
-						letra = b;
-						if(c<b)
-							if(c<a)
-								letra = c;
+		if(b<a)
+			if(b<c)
+			letra = b;
+		if(c<b)
+			if(c<a)
+			letra = c;
 		printf("La letra que va primero del alfabeto es: %c",letra);
 		
 }
