@@ -12,21 +12,25 @@ int main(){
         printf("Dame una hora correcta");
         return 0;
     }
-    else if(h1==2 && h2==4){
-        h1 = 0;
-        h2 = 0;
+    else if(h1==2){
+    	if(h2==4)
+ 	    	h1 = 0;
+    		h2 = 0;
     }
-    else if(h1==1 && h2>2){
-        h1 = 0;
-        h2 = h2 - 2;
+    else if(h1==1){
+    	if(h2>2)
+       		h1 = 0;
+        	h2 = h2 - 2;
     }
-    else if(h1==2 && h2<2){
-        h1 = 0;
-        h2 = h2 + 8;
+    else if(h1==2){
+    	if(h2<2)
+        	h1 = 0;
+        	h2 = h2 + 8;
     }
-    else if(h1==2 && h2>=2){
-        h1 = 1;
-        h2 = h2 - 2;
+    else if(h1==2){
+    	if(h2>=2)
+        	h1 = 1;
+        	h2 = h2 - 2;
     }
     hora[0] = h1+48;
     hora[1] = h2+48;
