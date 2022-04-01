@@ -14,7 +14,7 @@ void main(void){
 	
 	do{
 	//Se introduce un switch case
-	int numero,g,n,a1,b1,c1,gl,gv;
+	int numero,g,n,a1,b1,c1,gl,gv,anio;
 	float max=40,med,a2, b2, x;
 	char a,b,c,letra;
 	printf("\tMENU\n\n");
@@ -26,7 +26,7 @@ void main(void){
 	printf("6. Ecuacion de primer grado. \n"); 		//Ejercicio 6
 	printf("7. Clasificar un entero. \n"); 			//Ejercicio 7
 	printf("8. Calificacion. \n"); 					//Ejercicio 13
-	printf("9. Año bisiesto. \n"); 					//Ejercicio 14
+	printf("9. Anio bisiesto. \n"); 				//Ejercicio 14
 	printf("10. Numero mayor. \n"); 				//Ejercicio 9
 	printf("Digite una opcion entre (1-10): \n");
 	scanf("%i",&numero);
@@ -129,41 +129,70 @@ void main(void){
 			    	if(b2==0)
 			        	printf("Solucion indeterminada\n");
 		break;
-		case 7: printf("\n 7. Resolver (x/y)+1 \n");
-				printf("Digite x: \n");
-				/*scanf("%f",&a);
-				printf("Digite y: \n");
-				scanf("%f",&b);
-				c=(a/b)+1;
-				printf("El resultado es: %.2f",c);*/
+		case 7: 
+			    printf("Bienvenido\nFavor de insertar un numero:\nx= ");
+			    scanf("%d",&n);
+			    if (n<0)
+			        printf("\nTu valor es negativo -> (x < 0)");
+			    if (0<=n)
+			    	if(n<=100)
+			        printf("\nTu valor esta en el intervalo de 0 a 100 -> (0 <= x <=100)");
+			    if (n>100)
+			        printf("\nTu valor es mayor a 100 -> (x > 100)");
 		break;
-		case 8: printf("\n 8. Resolver (x+y)/(x-y) \n");
-				printf("Digite x: \n");
-				/*scanf("%f",&a);
-				printf("Digite y: \n");
-				scanf("%f",&b);
-				c=(a+b)/(a-b);
-				printf("El resultado es: %.2f",c);*/
+		case 8: 
+				printf("Digite la calificacion: ");
+				scanf("%f",&x);
+				if(x>=0)
+					if(x<5.0)
+						printf("Suspenso.");
+				else if(x>=5)
+					if(x<6.5)
+						printf("Aprobado.");
+				else if(x>=6.5)
+					if(x<8.5)
+						printf("Notable.");
+				if(x>=8.5)
+					if(x<10)
+						printf("Sobresaliente.");
+				else if(x==10)
+					printf("Matricula de honor.");
+				else
+					printf("No es un numero del 1 al 10.");
 		break;
-		case 9: printf("\n 9. Resolver x+(y/z) \n");
-				printf("Digite x: \n");
-				/*scanf("%f",&a);
-				printf("Digite y: \n");
-				scanf("%f",&b);
-				printf("Digite z: \n");
-				scanf("%f",&c);
-				m=a+(b/c);
-				printf("El resultado es: %.2f",m);*/
+		case 9: 	
+				printf("Ingrese el anio: ");
+				scanf("%d",&anio);
+				
+				if(anio%4==0){
+					if(anio%100 !=0)
+						printf("El anio es bisiesto");
+						 if(anio%400 ==0)
+							printf("El anio es bisiesto");
+				}
+				else
+					printf("El anio no es bisiesto");
 		break;
-		case 10: printf("\n 10. Resolver z/(x-(y/z)) \n");
-				printf("Digite x: \n");
-				/*scanf("%f",&a);
-				printf("Digite y: \n");
-				scanf("%f",&b);
-				printf("Digite z: \n");
-				scanf("%f",&c);
-				d=c/(a-(b/c));
-				printf("El resultado es: %.2f",d);*/
+		case 10:
+				printf("Introduce 3 enteros diferentes entre si: ");
+				scanf("%i %i %i",&a1, &b1, &c1);
+				if(a1>b1){
+					if(b1>c1)
+						printf("El numero mayor es: %i",a1);
+					else if(b1>a1)
+							if(a1>c1)
+						printf("El numero mayor es: %i",a1);
+					else
+						printf("El numero mayor es: %i",c1);
+				}
+				else{
+					if(a1>c1)
+						printf("El numero mayor es: %i",b1);
+					else if(b1>c1)
+						printf("El numero mayor es: %i",b1);
+					else
+						printf("El numero mayor es: %i",c1);		
+				}
 		break;
 		//Sino ha seleccionado un  número del 1 al 10 imprime el mensaje.
 		default: printf("No ha digitado un numero del menu");
@@ -176,21 +205,3 @@ void main(void){
 	//Si answer es igual a 1 continua ejecutando el menú, de lo contrario finaliza el programa.
 	while(answer==1);
 }
-/*
-void main(void){
-	char a,b,c,letra;
-	printf("Dame la primera letra: ");
-	scanf(" %c",&a);
-	printf("Dame la segunda letra: ");
-	scanf(" %c",&b);
-	printf("Dame la tercera letra: ");
-	scanf(" %c",&c);
-		if(a<b && a<c)
-			letra = a;
-			if(b<a && b<c)
-				letra = b;
-				if(c<b && c<a)
-					letra = c;
-		printf("La letra que va primero del alfabeto es: %c",letra);
-		
-}*/
