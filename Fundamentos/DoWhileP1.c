@@ -1,5 +1,5 @@
 /*
-	Name: Práctica con Do While
+	Name: Práctica con Do While - Romper por valor.
 	Copyright: @KarydNa9
 	Author: Bautista Bautista Karina
 	Date: 05/04/22 07:51
