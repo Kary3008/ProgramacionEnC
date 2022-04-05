@@ -24,5 +24,5 @@ void main(void)
 	}
 	prom=tot/numAls;
 	printf("El promedio es: %.2f",prom);
-	
+
 }
