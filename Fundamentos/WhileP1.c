@@ -6,6 +6,7 @@
 	Description: Hacer un ciclo While que rompa el ciclo
 	por valor.
 */
+#include<stdio.h>
 
 void main(void)
 {
@@ -16,12 +17,12 @@ void main(void)
 	scanf("%f",&numAls);
 	while(i<=numAls) 
 	{
-		printf("Calif: ",i,":");
+		printf("Calif%i: ",i);
 		scanf("%f",&calif);
 		tot=tot+calif;
 		i++;
 	}
 	prom=tot/numAls;
-	printf("El promedio es: ",prom);
+	printf("El promedio es: %.2f",prom);
 	
 }
