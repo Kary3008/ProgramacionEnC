@@ -1,21 +1,26 @@
 /*
 	Name: Tarea 16. Serie Fibonacci
-	Copyright: 
-	Author: 
+	Copyright: @KarydNa9
+	Author: Bautista Bautista Karina	
 	Date: 12/04/22 23:52
-	Description: 
+	Description: Solicitar al usuario los 2 primeros
+	elementos de la serie y la cantidad de elementos
+	a imprimir, tomando en cuenta los 2 primeros elementos.
 */
 #include<stdio.h>
 void main(void)
 {
-	int num, i, x=0,y=1,z=1;
+	int num, i, x=0,y=0,z=1;
 	
-	printf("Digite el numero de elementos: ");
+	printf("Digite el primer elemento: ");
+	scanf("%i",&x);
+	printf("Digite el segundo elemento: ");
+	scanf("%i",&y);
+	printf("Elementos a imprimir: ");
 	scanf("%i",&num);
+	printf("%i, %i, ",x,y);
 	
-	printf("1, ");
-	
-	for(i=1,i<num;i++)
+	for(i=1;i<num;i++)
 	{
 		z=x+y;
 		x=y;
