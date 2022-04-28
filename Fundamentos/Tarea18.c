@@ -1,8 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-//int max(int a, int b, int c);
-
-
+int max(int a, int b, int c);
+void decBin(int bin);
+int binDec(int dec);
+void dibujaCuad(int dcu);
+void dibujaTrian(int trian);
+int fact(int nfact);
+float cuad(float ncu);
+float pot(float arg, int exp);
+float abso(float nabs);
 
 int main()
 {
@@ -23,35 +29,51 @@ int main()
 		scanf("%i", &opc);
 		switch(opc){
 			case 1:
-				printf("1. Maximo de 3 numeros\n");
+				printf("\n1. Maximo de 3 numeros\n");
+				int a, b, c;
+			    printf("Digite 1er num: ");
+			    scanf("%i", &a);
+			    printf("Digite 2do num: ");
+			    scanf("%i", &b);
+			    printf("Digite 3er num: ");
+			    scanf("%i", &c);
+			    max(a, b, c);
+			    return 0;
 				break;
 			case 2:
-				printf("2. Convertir de decimal a binario\n");
+				printf("\n2. Convertir de decimal a binario\n");
 				break;	
 			case 3:
-				printf("3. Convertir de binario a decimal\n");
+				printf("\n3. Convertir de binario a decimal\n");
 				break;
 			case 4:
-				printf("4. Dibujar un cuadrado con asteriscos\n");
+				printf("\n4. Dibujar un cuadrado con asteriscos\n");
 				break;
 			case 5:
-				printf("5. Dibujar un triangulo con asteriscos\n");
+				printf("\n5. Dibujar un triangulo con asteriscos\n");
 				break;
 			case 6:
-				printf("6. Factorial de un numero\n");
+				printf("\n6. Factorial de un numero\n");
 				break;
 			case 7:
-				printf("7. Cuadrado de un numero\n");
+				printf("\n7. Cuadrado de un numero\n");
 				break;
 			case 8:
-				printf("8. Potenciar un numero\n");
+				printf("\n8. Potenciar un numero\n");
+				float res=pot(2,3);
+				printf("El valor es: %.1f", res);
 				break;	
 			case 9:
-				printf("9. Valor absoluto de un numero\n");
+				printf("\n9. Valor absoluto de un numero\n");
+				float nabs;
+			    printf("Digite un  numero ");
+			    scanf("%f",&nabs);
+			    abso(nabs);
+			    return 0;
 				break;	
 			//Sino se ha seleccionado un número del 1 al 5 entonces...	
 			default:
-				printf("La opcion que ingreso es incorrecta");
+				printf("\nLa opcion que ingreso es incorrecta");
 				break;		
 		}
 		printf("\n\nDeseas volver a ver el menu\n");
@@ -60,4 +82,35 @@ int main()
 	}
 	//Si answer es igual a 1 continua ejecutando, de lo contrario finaliza el programa.
 	while(answer==1);	
+}
+
+
+float pot(float arg, int exp)
+{
+	int i, res=1;
+	for(i=0;i<exp;i++)
+	{
+		res*=arg;
+	}
+	return res;
+}
+
+int max(int a, int b, int c)
+{
+    if(a >= b && a >= c)
+        printf("%i", a);
+    if(b >= a && b >= c)
+        printf("%i", b);
+    if(c >= a && c >= b)
+        printf("%i", c);
+}
+
+float abso(float nabs)
+{
+	if(nabs>0)
+		printf("%.1f",nabs);
+	else{
+		nabs=(-1)*(nabs);
+		printf("%.1f",nabs);
+		}
 }
