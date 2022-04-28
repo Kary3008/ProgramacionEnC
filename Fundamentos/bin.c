@@ -1,11 +1,11 @@
 #include<stdio.h>
 
 void main(void){
-	int n, bin[999]; //arreglo
+	int n, bin[100]; //arreglo
 	int i=0;
 	
-	printf("Ingrese un numero decimal");
-	scanf("%i". &n);
+	printf("Ingrese un numero decimal: ");
+	scanf("%i", &n);
 	
 	while(n!=0) //almacena valores de 0 y 1
 	{

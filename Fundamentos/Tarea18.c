@@ -42,6 +42,11 @@ int main()
 				break;
 			case 2:
 				printf("\n2. Convertir de decimal a binario\n");
+				int bin;
+				printf("Ingrese un numero decimal: ");
+				scanf("%i", &bin);
+				decBin(bin);
+				return 0;
 				break;	
 			case 3:
 				printf("\n3. Convertir de binario a decimal\n");
@@ -113,4 +118,23 @@ float abso(float nabs)
 		nabs=(-1)*(nabs);
 		printf("%.1f",nabs);
 		}
+}
+
+void decBin(int bin)
+{
+	int n[100], i=0; 
+	while(bin!=0) //almacena valores de 0 y 1
+	{
+		n[i]=bin%2; //el numero se divide entre 2 y se almacena el residuo: (1,0)
+		bin=bin/2;
+		i++;
+	}
+	i--;
+	printf("Binario: ");
+	
+	while (i>=0)
+	{
+		printf("%i",n[i]); //imprime los valores guardados en el arreglo
+		i--; //se imprime el arreglo de forma inversa
+	}
 }
