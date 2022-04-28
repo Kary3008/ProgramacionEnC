@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
+//int max(int a, int b, int c);
 
-void main(void)
+
+
+int main()
 {
 	int answer, opc, num1=0, num2=0;
 	do
 	{
 		printf("MENU DE OPCIONES\n");
-		printf("1. Máximo de 3 números\n");
+		printf("1. Maximo de 3 numeros\n");
 		printf("2. Convertir de decimal a binario\n");
 		printf("3. Convertir de binario a decimal\n");
 		printf("4. Dibujar un cuadrado con asteriscos\n");
@@ -20,7 +23,7 @@ void main(void)
 		scanf("%i", &opc);
 		switch(opc){
 			case 1:
-				printf("1. Máximo de 3 números\n");
+				printf("1. Maximo de 3 numeros\n");
 				break;
 			case 2:
 				printf("2. Convertir de decimal a binario\n");
