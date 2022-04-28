@@ -1,5 +1,15 @@
+/*
+	Name: 
+	Copyright: 
+	Author: 
+	Date: 28/04/22 11:54
+	Description: 
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
+
 int max(int a, int b, int c);
 void decBin(int bin);
 int binDec(int dec);
