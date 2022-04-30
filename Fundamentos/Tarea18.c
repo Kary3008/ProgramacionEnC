@@ -65,9 +65,17 @@ int main()
 				break;
 			case 4:
 				printf("\n4. Dibujar un cuadrado con asteriscos\n");
+				int dcu;
+				printf("Inserte la base del cuadrado: ");
+				scanf("%i",&dcu);
+				dibujaCuad(dcu);
 				break;
 			case 5:
 				printf("\n5. Dibujar un triangulo con asteriscos\n");
+				int trian;
+				printf("Inserte la base del triangulo: ");
+				scanf("%i",&trian);
+				dibujaTrian(trian);
 				break;
 			case 6:
 				printf("\n6. Factorial de un numero\n");
@@ -185,9 +193,31 @@ int fact(int n)
 {
 	int i,fact=1;
 	for(i=1; i<=n; i++)
-	{
 		fact = fact*i;
-	}
-	
+			
 	printf("El valor es: %i", fact);
+}
+
+void dibujaTrian(int trian){
+	int i, k;
+	for(i=1; i<=trian; i++)
+	{	
+		for(k=1;k<=trian-i;k++)
+		printf(" ");
+		for(k=1;k<=2*i-1;k++)
+		printf("*");
+		printf("\n");
+	}
+}
+
+void dibujaCuad(int dcu){
+	int i, j;
+	for(i=1; i<=dcu; i++)
+	{	
+		for(j=1;j<=dcu;j++)
+		printf(" ");
+		for(j=1;j<=dcu;j++)
+		printf(" * ");
+		printf("\n");
+	}
 }
