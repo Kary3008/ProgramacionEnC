@@ -68,6 +68,7 @@ int main()
 				int dcu;
 				printf("Inserte la base del cuadrado: ");
 				scanf("%i",&dcu);
+				printf("\n");
 				dibujaCuad(dcu);
 				break;
 			case 5:
@@ -75,6 +76,7 @@ int main()
 				int trian;
 				printf("Inserte la base del triangulo: ");
 				scanf("%i",&trian);
+				printf("\n");
 				dibujaTrian(trian);
 				break;
 			case 6:
@@ -93,8 +95,13 @@ int main()
 				break;
 			case 8:
 				printf("\n8. Potenciar un numero\n");
-				float res=pot(2,3);
-				printf("El valor es: %.1f", res);
+				float arg;
+				int exp;
+				printf("Digite la base: ");
+				scanf("%f",&arg);
+				printf("Digite el exponente");
+				scanf("%i",&exp);
+				pot(arg,exp);
 				break;	
 			case 9:
 				printf("\n9. Valor absoluto de un numero\n");
@@ -124,7 +131,7 @@ float pot(float arg, int exp)
 	{
 		res*=arg;
 	}
-	return res;
+	printf("La potencia de %.0f ^ %i es: %i",arg,exp,res);
 }
 
 int max(int a, int b, int c)
@@ -140,10 +147,10 @@ int max(int a, int b, int c)
 float abso(float nabs)
 {
 	if(nabs>0)
-		printf("El valor absoluto es |%.1f|",nabs);
+		printf("El valor absoluto es |%.0f|",nabs);
 	else{
 		nabs=(-1)*(nabs);
-		printf("El valor absoluto es |%.1f|",nabs);
+		printf("El valor absoluto es |%.0f|",nabs);
 		}
 }
 
@@ -186,7 +193,7 @@ int binDec(int dec)
 float cuad(float ncu)
 {
 	ncu=ncu*ncu;
-	printf("El cuadrado de un numero es: %.2f",ncu);
+	printf("El cuadrado de un numero es: %.1f",ncu);
 }
 
 int fact(int n)
