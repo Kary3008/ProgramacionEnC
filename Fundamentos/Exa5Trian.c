@@ -7,8 +7,12 @@ void main(void)
 	
 	int i,k;
 	for(i=0; i<4; i++)
-	{
-		for(k=0;k<i+1;k++)
+	{	
+		for(k=0;k<4-i;k++)
+		{
+		printf(" ");
+		}
+		for(k=0;k<i*2+1;k++)
 		{
 		printf("*");
 		}
