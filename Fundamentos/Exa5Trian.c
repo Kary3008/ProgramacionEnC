@@ -1,18 +1,17 @@
 //triángulo de asteriscos
 #include<stdio.h>
-
-
 void main(void)
 {
-	
-	int i,k;
-	for(i=0; i<4; i++)
+	int i,k,n;
+	printf("Inserte la base del triangulo: ");
+	scanf("%i",&n);
+	for(i=1; i<=n; i++)
 	{	
-		for(k=0;k<4-i;k++)
+		for(k=1;k<=n-i;k++)
 		{
 		printf(" ");
 		}
-		for(k=0;k<i*2+1;k++)
+		for(k=1;k<=2*i-1;k++)
 		{
 		printf("*");
 		}
