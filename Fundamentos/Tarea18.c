@@ -1,24 +1,24 @@
 /*
-	Name: 
-	Copyright: 
-	Author: 
+	Name: Tarea 18 - Funciones
+	Copyright: @KarydNa9
+	Author: Bautista Bautista Karina
 	Date: 28/04/22 11:54
-	Description: 
+	Description: Hacer un menú con funciones.
 */
 
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int max(int a, int b, int c);
-void decBin(int bin);
-int binDec(int dec);
-void dibujaCuad(int dcu);
-void dibujaTrian(int trian);
-int fact(int n);
-float cuad(float ncu);
-float pot(float arg, int exp);
-float abso(float nabs);
+int max(int a, int b, int c); //Ejercicio 1
+void decBin(int bin); //Ejercicio 2
+int binDec(int dec); //Ejercicio 3
+void dibujaCuad(int dcu); //Ejercicio 4
+void dibujaTrian(int trian); //Ejercicio 5
+int fact(int n); //Ejercicio 6
+float cuad(float ncu); //Ejercicio 7
+float pot(float arg, int exp); //Ejercicio 8
+float abso(float nabs); //Ejercicio 9
 
 int main()
 {
@@ -123,17 +123,7 @@ int main()
 	while(answer==1);	
 }
 
-
-float pot(float arg, int exp)
-{
-	int i, res=1;
-	for(i=0;i<exp;i++)
-	{
-		res*=arg;
-	}
-	printf("La potencia de %.0f ^ %i es: %i",arg,exp,res);
-}
-
+//Función - Ejercicio 1
 int max(int a, int b, int c)
 {
     if(a >= b && a >= c)
@@ -143,17 +133,7 @@ int max(int a, int b, int c)
     if(c >= a && c >= b)
         printf("%i", c);
 }
-
-float abso(float nabs)
-{
-	if(nabs>0)
-		printf("El valor absoluto es |%.0f|",nabs);
-	else{
-		nabs=(-1)*(nabs);
-		printf("El valor absoluto es |%.0f|",nabs);
-		}
-}
-
+//Función - Ejercicio 2
 void decBin(int bin)
 {
 	int n[100], i=0; 
@@ -172,7 +152,7 @@ void decBin(int bin)
 		i--; //se imprime el arreglo de forma inversa
 	}
 }
-
+//Función - Ejercicio 3
 int binDec(int dec)
 {
 	int dig, pos=0, res=0;
@@ -189,22 +169,19 @@ int binDec(int dec)
 	
 	printf("El resultado es: %i", res);
 }
-
-float cuad(float ncu)
-{
-	ncu=ncu*ncu;
-	printf("El cuadrado de un numero es: %.1f",ncu);
+//Función - Ejercicio 4
+void dibujaCuad(int dcu){
+	int i, j;
+	for(i=1; i<=dcu; i++)
+	{	
+		for(j=1;j<=dcu;j++)
+		printf(" ");
+		for(j=1;j<=dcu;j++)
+		printf(" * ");
+		printf("\n");
+	}
 }
-
-int fact(int n)
-{
-	int i,fact=1;
-	for(i=1; i<=n; i++)
-		fact = fact*i;
-			
-	printf("El valor es: %i", fact);
-}
-
+//Función - Ejercicio 5
 void dibujaTrian(int trian){
 	int i, k;
 	for(i=1; i<=trian; i++)
@@ -216,15 +193,38 @@ void dibujaTrian(int trian){
 		printf("\n");
 	}
 }
-
-void dibujaCuad(int dcu){
-	int i, j;
-	for(i=1; i<=dcu; i++)
-	{	
-		for(j=1;j<=dcu;j++)
-		printf(" ");
-		for(j=1;j<=dcu;j++)
-		printf(" * ");
-		printf("\n");
+//Función - Ejercicio 6
+int fact(int n)
+{
+	int i,fact=1;
+	for(i=1; i<=n; i++)
+		fact = fact*i;
+			
+	printf("El valor es: %i", fact);
+}
+//Función - Ejercicio 7
+float cuad(float ncu)
+{
+	ncu=ncu*ncu;
+	printf("El cuadrado de un numero es: %.1f",ncu);
+}
+//Función - Ejercicio 8
+float pot(float arg, int exp)
+{
+	int i, res=1;
+	for(i=0;i<exp;i++)
+	{
+		res*=arg;
 	}
+	printf("La potencia de %.0f ^ %i es: %i",arg,exp,res);
+}
+//Función - Ejercicio 9
+float abso(float nabs)
+{
+	if(nabs>0)
+		printf("El valor absoluto es |%.0f|",nabs);
+	else{
+		nabs=(-1)*(nabs);
+		printf("El valor absoluto es |%.0f|",nabs);
+		}
 }
