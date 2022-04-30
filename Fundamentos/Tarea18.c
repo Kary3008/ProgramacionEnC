@@ -60,6 +60,10 @@ int main()
 				break;	
 			case 3:
 				printf("\n3. Convertir de binario a decimal\n");
+				int dec;
+				printf("Ingrese el numero: \n");
+				scanf("%i",&dec);
+				binDec(dec);
 				break;
 			case 4:
 				printf("\n4. Dibujar un cuadrado con asteriscos\n");
@@ -72,6 +76,10 @@ int main()
 				break;
 			case 7:
 				printf("\n7. Cuadrado de un numero\n");
+				float ncu;
+				printf("Digite un numero: ");
+				scanf("%f",&ncu);
+				cuad(ncu);
 				break;
 			case 8:
 				printf("\n8. Potenciar un numero\n");
@@ -147,4 +155,27 @@ void decBin(int bin)
 		printf("%i",n[i]); //imprime los valores guardados en el arreglo
 		i--; //se imprime el arreglo de forma inversa
 	}
+}
+
+int binDec(int dec)
+{
+	int dig, pos=0, res=0;
+	int vector[]={1,2,4,8,16,32,64,128,256};
+	while(dec>0)
+	{
+		dig=dec%10;//toma la ultima posición: 1001=9
+		if(dig==1)
+			res=res+vector[pos];
+			
+			pos++; //la posición va a ir aumentando.
+			dec=dec/10;//quita el num hace la comparación entre los otros: 123
+	}
+	
+	printf("El resultado es: %i", res);
+}
+
+float cuad(float ncu)
+{
+	ncu=ncu*ncu;
+	printf("El cuadrado de un numero es: %.2f",ncu);
 }
