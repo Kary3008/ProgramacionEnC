@@ -15,7 +15,7 @@ void decBin(int bin);
 int binDec(int dec);
 void dibujaCuad(int dcu);
 void dibujaTrian(int trian);
-int fact(int nfact);
+int fact(int n);
 float cuad(float ncu);
 float pot(float arg, int exp);
 float abso(float nabs);
@@ -48,7 +48,6 @@ int main()
 			    printf("Digite 3er num: ");
 			    scanf("%i", &c);
 			    max(a, b, c);
-			    return 0;
 				break;
 			case 2:
 				printf("\n2. Convertir de decimal a binario\n");
@@ -56,7 +55,6 @@ int main()
 				printf("Ingrese un numero decimal: ");
 				scanf("%i", &bin);
 				decBin(bin);
-				return 0;
 				break;	
 			case 3:
 				printf("\n3. Convertir de binario a decimal\n");
@@ -73,6 +71,10 @@ int main()
 				break;
 			case 6:
 				printf("\n6. Factorial de un numero\n");
+				int n;
+				printf("Digite un numero: ");
+				scanf("%i", &n);
+				fact(n);
 				break;
 			case 7:
 				printf("\n7. Cuadrado de un numero\n");
@@ -89,10 +91,9 @@ int main()
 			case 9:
 				printf("\n9. Valor absoluto de un numero\n");
 				float nabs;
-			    printf("Digite un  numero ");
+			    printf("Digite un  numero: ");
 			    scanf("%f",&nabs);
 			    abso(nabs);
-			    return 0;
 				break;	
 			//Sino se ha seleccionado un número del 1 al 5 entonces...	
 			default:
@@ -131,10 +132,10 @@ int max(int a, int b, int c)
 float abso(float nabs)
 {
 	if(nabs>0)
-		printf("%.1f",nabs);
+		printf("El valor absoluto es |%.1f|",nabs);
 	else{
 		nabs=(-1)*(nabs);
-		printf("%.1f",nabs);
+		printf("El valor absoluto es |%.1f|",nabs);
 		}
 }
 
@@ -178,4 +179,15 @@ float cuad(float ncu)
 {
 	ncu=ncu*ncu;
 	printf("El cuadrado de un numero es: %.2f",ncu);
+}
+
+int fact(int n)
+{
+	int i,fact=1;
+	for(i=1; i<=n; i++)
+	{
+		fact = fact*i;
+	}
+	
+	printf("El valor es: %i", fact);
 }
