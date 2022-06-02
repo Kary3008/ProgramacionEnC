@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define TAM 20
 
-int largo(char palabra[20]);
-void concatena(char , char );
+int largo(char w1[TAM]);
+void concatena(char s1[20], char s2[20]);
 void copiaCad(char , char );
 int cuentaVocales(char );
-int cuentaMayus(char );
+int cuentaMayus(char palabra[20]);
 
 int main()
 {
@@ -23,9 +24,21 @@ int main()
 		switch(opc){
 				case 1:
 				printf("\n1. Longitud de una cadena\n\n");
+				char w1[TAM];
+				printf("Ingresa una palabra: ");
+				scanf("%s", w1);
+				largo(w1);
 				break;
 				case 2:
 				printf("\n2. Concatenar una cadena\n\n");
+				char s1[20];
+				char s2[20];
+				
+				printf("\nIngrese la palabra para s1: ");
+				scanf("%s",s1);
+				printf("\nIngrese la palabra para s2: ");
+				scanf("%s",s2);
+				concatena(s1,s2);
 				break;
 				case 3:
 				printf("\n3. Copiar una cadena\n\n");
@@ -38,7 +51,7 @@ int main()
 				char palabra[20];
 				printf("Ingresa una palabra: ");
 				scanf("%s", palabra);
-				largo(palabra);
+				cuentaMayus(palabra);
 				break;
 			default:
 				printf("\nLa opcion que ingreso es incorrecta");
@@ -52,8 +65,23 @@ int main()
 	while(answer==1);
 }
 
-//FUNCIONES
-int largo(char palabra[20])
+//     FUNCIONES
+
+//Ejercicio 1
+int largo(char w1[TAM])
+{
+	char aux[TAM]={'\0'};
+	printf("La longitud de w1=%s es %d\n",w1,strlen(w1));
+}
+
+//Ejericicio 2
+void concatena(char s1[20], char s2[20])
+{
+	printf("w1*w2 es %s\n",strcat(s1,s2));
+}
+
+//Ejercicio 5
+int cuentaMayus(char palabra[20])
 {
 	int i=0, contMayus=0;
 	while(palabra[i]!='\0')
