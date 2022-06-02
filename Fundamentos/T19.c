@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define TAM 20
+#define TAM 10
 
 int largo(char w1[TAM]);
-void concatena(char s1[20], char s2[20]);
-void copiaCad(char , char );
+void concatena(char s1[TAM], char s2[TAM]);
+void copiaCad(char str1[TAM], char str2[TAM]);
 int cuentaVocales(char );
-int cuentaMayus(char palabra[20]);
+int cuentaMayus(char palabra[TAM]);
 
 int main()
 {
@@ -31,9 +31,7 @@ int main()
 				break;
 				case 2:
 				printf("\n2. Concatenar una cadena\n\n");
-				char s1[20];
-				char s2[20];
-				
+				char s1[TAM],s2[TAM];				
 				printf("\nIngrese la palabra para s1: ");
 				scanf("%s",s1);
 				printf("\nIngrese la palabra para s2: ");
@@ -42,13 +40,17 @@ int main()
 				break;
 				case 3:
 				printf("\n3. Copiar una cadena\n\n");
+				char str1[TAM], str2[TAM];
+				printf("Ingrese una palabra para s1: ");
+				scanf("%s",str1);
+				copiaCad(str1,str2);
 				break;
 				case 4:
 				printf("\n4. Contar vocales\n\n");
 				break;
 				case 5:
 				printf("\n5. Contar mayusculas\n\n");
-				char palabra[20];
+				char palabra[TAM];
 				printf("Ingresa una palabra: ");
 				scanf("%s", palabra);
 				cuentaMayus(palabra);
@@ -75,13 +77,30 @@ int largo(char w1[TAM])
 }
 
 //Ejericicio 2
-void concatena(char s1[20], char s2[20])
+void concatena(char s1[TAM], char s2[TAM])
 {
-	printf("w1*w2 es %s\n",strcat(s1,s2));
+	printf("Su concatenacion es %s\n",strcat(s1,s2));
+}
+
+//Ejercicio 3
+void copiaCad(char str1[TAM], char str2[TAM])
+{
+	int longitud = strlen(str1);
+	
+	if(longitud < TAM)
+	{
+	strcpy(str2, str1);
+	printf("La palabra en string1 es: %s", str1);
+	printf("\nLa palabra en string2 es: %s", str2);
+	}
+	else
+	{
+		printf("No se pudo copiar s1 a s2\n");
+	}
 }
 
 //Ejercicio 5
-int cuentaMayus(char palabra[20])
+int cuentaMayus(char palabra[TAM])
 {
 	int i=0, contMayus=0;
 	while(palabra[i]!='\0')
