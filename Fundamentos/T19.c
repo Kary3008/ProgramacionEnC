@@ -1,12 +1,21 @@
+/*
+	Name: Tarea 19
+	Copyright: @KarydNa9
+	Author: Bautista Bautista Karina
+	Date: 31/05/22 12:07
+	Description: Crear un programa en C, 
+	donde se implementen y prueben las funciones 
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define TAM 10
+#define TAM 12
 
 int largo(char w1[TAM]);
 void concatena(char s1[TAM], char s2[TAM]);
 void copiaCad(char str1[TAM], char str2[TAM]);
-int cuentaVocales(char );
+int cuentaVocales(char letra[TAM]);
 int cuentaMayus(char palabra[TAM]);
 
 int main()
@@ -23,37 +32,41 @@ int main()
 		scanf("%i", &opc);
 		switch(opc){
 				case 1:
-				printf("\n1. Longitud de una cadena\n\n");
-				char w1[TAM];
-				printf("Ingresa una palabra: ");
-				scanf("%s", w1);
-				largo(w1);
+					printf("\n1. Longitud de una cadena\n\n");
+					char w1[TAM];
+					printf("Ingresa una palabra: ");
+					scanf("%s", w1);
+					largo(w1);
 				break;
 				case 2:
-				printf("\n2. Concatenar una cadena\n\n");
-				char s1[TAM],s2[TAM];				
-				printf("\nIngrese la palabra para s1: ");
-				scanf("%s",s1);
-				printf("\nIngrese la palabra para s2: ");
-				scanf("%s",s2);
-				concatena(s1,s2);
+					printf("\n2. Concatenar una cadena\n\n");
+					char s1[TAM],s2[TAM];				
+					printf("\nIngrese la palabra para s1: ");
+					scanf("%s",s1);
+					printf("\nIngrese la palabra para s2: ");
+					scanf("%s",s2);
+					concatena(s1,s2);
 				break;
 				case 3:
-				printf("\n3. Copiar una cadena\n\n");
-				char str1[TAM], str2[TAM];
-				printf("Ingrese una palabra para s1: ");
-				scanf("%s",str1);
-				copiaCad(str1,str2);
+					printf("\n3. Copiar una cadena\n\n");
+					char str1[TAM], str2[TAM];
+					printf("Ingrese una palabra para s1: ");
+					scanf("%s",str1);
+					copiaCad(str1,str2);
 				break;
 				case 4:
-				printf("\n4. Contar vocales\n\n");
+					printf("\n4. Contar vocales\n\n");
+					char letra[TAM];
+					printf("Ingresa una palabra: ");
+					scanf("%s", letra);
+					cuentaVocales(letra);
 				break;
 				case 5:
-				printf("\n5. Contar mayusculas\n\n");
-				char palabra[TAM];
-				printf("Ingresa una palabra: ");
-				scanf("%s", palabra);
-				cuentaMayus(palabra);
+					printf("\n5. Contar mayusculas\n\n");
+					char palabra[TAM];
+					printf("Ingresa una palabra: ");
+					scanf("%s", palabra);
+					cuentaMayus(palabra);
 				break;
 			default:
 				printf("\nLa opcion que ingreso es incorrecta");
@@ -98,6 +111,21 @@ void copiaCad(char str1[TAM], char str2[TAM])
 		printf("No se pudo copiar s1 a s2\n");
 	}
 }
+
+//Ejercicio 4
+int cuentaVocales(char letra[TAM]){
+	int contVocales = 0, i=0;
+	while(letra[i]!='\0')
+	{
+		printf("\n%c", letra[i]);
+		if(letra[i]=='a'||letra[i]=='e'||letra[i]=='i'||letra[i]=='o'||letra[i]=='u')
+		{
+			contVocales++;
+		}
+		i++;
+	}
+	printf("\nLa cantidad de vocales de la palabra %s es: %d", letra, contVocales);	
+	}
 
 //Ejercicio 5
 int cuentaMayus(char palabra[TAM])
