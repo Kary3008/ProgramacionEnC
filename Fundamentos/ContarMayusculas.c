@@ -4,19 +4,6 @@
 
 void main(void)
 {
-	/*char texto;
-	int mayus=0;
-	
-	do{
-	printf("Introduzca texto: ");
-	scanf("%s",texto);
-	
-	if((texto>='A') && (texto<='Z')) mayus++;
-		}
-	while (texto!='.');
-	printf("Texto original: %s\n",texto);
-		printf("Mayusculas: %i\n", mayus);
-		*/
 	int contMayus = 0;
 	char palabra[20];
 	int i=0;
