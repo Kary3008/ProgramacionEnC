@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include <string.h>
+#include <string.h>
 
-/*int largo(char *);
-void concatena(char *, char *);
-void copiaCad(char *, char *);
-int cuentaVocales(char *);
-int cuentaMayus(char *);
-*/
+int largo(char palabra[20]);
+void concatena(char , char );
+void copiaCad(char , char );
+int cuentaVocales(char );
+int cuentaMayus(char );
 
 int main()
 {
@@ -36,6 +35,10 @@ int main()
 				break;
 				case 5:
 				printf("\n5. Contar mayusculas\n\n");
+				char palabra[20];
+				printf("Ingresa una palabra: ");
+				scanf("%s", palabra);
+				largo(palabra);
 				break;
 			default:
 				printf("\nLa opcion que ingreso es incorrecta");
@@ -47,6 +50,20 @@ int main()
 	}
 	//Si answer es igual a 1 continua ejecutando, de lo contrario finaliza el programa.
 	while(answer==1);
-	
-	return 0;
+}
+
+//FUNCIONES
+int largo(char palabra[20])
+{
+	int i=0, contMayus=0;
+	while(palabra[i]!='\0')
+	{
+		printf("\n%c", palabra[i]);
+		if(palabra[i]>='A'&&palabra[i]<='Z')
+		{
+			contMayus++;
+		}
+		i++;
+	}
+	printf("\nLa cantidad de mayusculas de la palabra %s es: %d", palabra, contMayus);
 }
