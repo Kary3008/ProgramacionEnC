@@ -5,11 +5,9 @@ int main()
 {
 	char matriz[3][3], opc; //matriz principal, opción
 	int i, j; //iteradores
-	int fila, col, ganador=0, turno=1;
+	int fila, col, ganador=0, turno=1; //turno para que empiece con el 1P.
 	
 	printf("\t Juego del gato\n");
-	printf("Presione S para jugar / N para salir: ");
-	scanf("%c", &opc);
 	
 	for (i=0; i<3; i++)
 			{
@@ -20,8 +18,8 @@ int main()
 				printf("\n");
 			}
 			
-//	printf("Presione Y para jugar / N para salir: ");
-//	scanf("%c",&opc);		
+	printf("Presione S para jugar / N para salir: ");
+	scanf("%c",&opc);		
 	
 	if(opc == 's' || opc == 'S'){
 		do{
@@ -33,11 +31,12 @@ int main()
 					printf("Digite columna [->] (0-2): ");
 					scanf("%d", &col);
 					
-					if(matriz[fila][col] == 'x' || matriz[fila][col] == 'o')
+					if(matriz[fila][col] == 'x' || matriz[fila][col] == 'o' || fila > 2 || col > 2)
 					{
-						printf("\n Coordenadas no validas, intente nuevamente. \n");
+						printf("\n Coordernadas invalidas o ya hay un valor\n");
+						printf("Intente nuevamente. \n");
 					}
-				}while(matriz[fila][col] == 'x' || matriz[fila][col] == 'o');
+				}while(matriz[fila][col] == 'x' || matriz[fila][col] == 'o' || fila > 2 || col > 2);//sino se repite sale del bucle
 				
 				matriz[fila][col] = 'x';
 				
@@ -50,7 +49,7 @@ int main()
 					printf("\n");
 				}
 				
-				turno++;
+				turno++; //turno 
 				
 			} else if(turno%2 == 0)	{
 				do{
@@ -60,11 +59,12 @@ int main()
 					printf("Digite columna [->] (0-2): ");
 					scanf("%d", &col);
 					
-					if(matriz[fila][col] == 'x' || matriz[fila][col] == 'o')
+					if(matriz[fila][col] == 'x' || matriz[fila][col] == 'o' || fila > 2 || col > 2)
 					{
-						printf("\n Coordenadas no validas, intente nuevamente. \n");
+						printf("\n Coordernadas invalidas o ya hay un valor\n");
+						printf("Intente nuevamente. \n");
 					}
-				}while(matriz[fila][col] == 'x' || matriz[fila][col] == 'o');
+				} while(matriz[fila][col] == 'x' || matriz[fila][col] == 'o' || fila > 2 || col > 2);
 				
 				matriz[fila][col] = 'o';
 
