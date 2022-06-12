@@ -26,11 +26,18 @@ int main()
 	if(opc == 's' || opc == 'S'){
 		do{
 			if(turno%2 == 1){
-				printf("Jugador 1: \n");
-				printf("Digite fila: (0-2)");
-				scanf("%d", &fila);
-				printf("Digite columna: (0-2)");
-				scanf("%d", &col);
+				do{
+					printf("\n\tJugador 1: \n");
+					printf("Digite fila [abajo] (0-2): ");
+					scanf("%d", &fila);
+					printf("Digite columna [->] (0-2): ");
+					scanf("%d", &col);
+					
+					if(matriz[fila][col] == 'x' || matriz[fila][col] == 'o')
+					{
+						printf("\n Coordenadas no validas, intente nuevamente. \n");
+					}
+				}while(matriz[fila][col] == 'x' || matriz[fila][col] == 'o');
 				
 				matriz[fila][col] = 'x';
 				
@@ -46,11 +53,18 @@ int main()
 				turno++;
 				
 			} else if(turno%2 == 0)	{
-				printf("Jugador 2: \n");
-				printf("Digite fila: (0-2)");
-				scanf("%d", &fila);
-				printf("Digite columna: (0-2)");
-				scanf("%d", &col);
+				do{
+					printf("\n\tJugador 2: \n");
+					printf("Digite fila [abajo] (0-2): ");
+					scanf("%d", &fila);
+					printf("Digite columna [->] (0-2): ");
+					scanf("%d", &col);
+					
+					if(matriz[fila][col] == 'x' || matriz[fila][col] == 'o')
+					{
+						printf("\n Coordenadas no validas, intente nuevamente. \n");
+					}
+				}while(matriz[fila][col] == 'x' || matriz[fila][col] == 'o');
 				
 				matriz[fila][col] = 'o';
 
