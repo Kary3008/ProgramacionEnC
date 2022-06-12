@@ -5,7 +5,7 @@ int main()
 {
 	char matriz[3][3], opc; //matriz principal, opción
 	int i, j; //iteradores
-	int fila, col, ganador=0;
+	int fila, col, ganador=0, turno=1;
 	
 	printf("\t Juego del gato\n");
 	printf("Presione S para jugar / N para salir: ");
@@ -21,26 +21,48 @@ int main()
 			}
 			
 //	printf("Presione Y para jugar / N para salir: ");
-//	scanf("%c",&opc);
-//	int fila, col, ganador=0;		
+//	scanf("%c",&opc);		
 	
 	if(opc == 's' || opc == 'S'){
 		do{
-			printf("Jugador 1: \n");
-			printf("Digite fila: (0-2)");
-			scanf("%d", &fila);
-			printf("Digite columna: (0-2)");
-			scanf("%d", &col);
-			
-			matriz[fila][col] = 'x';
-			
-			//system("cls");
-			for (i=0; i<3; i++)
-			{
-				for (j=0; j<3; j++){
-				printf("[%c]", matriz[i][j]);
+			if(turno%2 == 1){
+				printf("Jugador 1: \n");
+				printf("Digite fila: (0-2)");
+				scanf("%d", &fila);
+				printf("Digite columna: (0-2)");
+				scanf("%d", &col);
+				
+				matriz[fila][col] = 'x';
+				
+				//system("cls");
+				for (i=0; i<3; i++)
+				{
+					for (j=0; j<3; j++){
+					printf("[%c]", matriz[i][j]);
+					}
+					printf("\n");
 				}
-				printf("\n");
+				
+				turno++;
+				
+			} else if(turno%2 == 0)	{
+				printf("Jugador 2: \n");
+				printf("Digite fila: (0-2)");
+				scanf("%d", &fila);
+				printf("Digite columna: (0-2)");
+				scanf("%d", &col);
+				
+				matriz[fila][col] = 'o';
+
+				//system("cls");
+				for (i=0; i<3; i++)
+				{
+					for (j=0; j<3; j++){
+					printf("[%c]", matriz[i][j]);
+					}
+					printf("\n");
+				}
+				turno++;
 			}
 		} while(ganador != 1);
 	}
