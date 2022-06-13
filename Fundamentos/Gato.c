@@ -3,12 +3,12 @@
 
 void main(void)
 {
-	system("color c");
+	system("color 3");
 	char matriz[3][3], opc; //matriz principal, opción
 	int i, j; //iteradores
 	int fila, col, ganador=0, turno=1; //turno para que empiece con el 1P.
 	
-	printf("\t Juego del gato\n");
+	printf("\t---Juego del gato---\n");
 	
 	for (i=0; i<3; i++)
 			{
@@ -28,6 +28,7 @@ void main(void)
 	if(opc == 's' || opc == 'S'){
 		printf("\nInstrucciones: \n");
 		printf("Escoge una fila (vertical) del 0 al 2, y escoge una columna(horizontal) del 0 al 2");
+		printf("Jugador 1: x, Jugador 2: o");
 		do{
 			if(turno%2 == 1){
 				do{	
@@ -39,7 +40,7 @@ void main(void)
 					//se coloca un limite de coordenadas o si tiene algún valor ya dentro.
 					if(matriz[fila][col] == 'x' || matriz[fila][col] == 'o' || fila > 2 || col > 2) 
 					{
-						printf("\nCoordernadas invalidas o ya hay un valor\n");
+						printf("\nCoordernadas invalidas o ya hay un valor.\n");
 						printf("Intente nuevamente. \n");
 					}
 				}while(matriz[fila][col] == 'x' || matriz[fila][col] == 'o' || fila > 2 || col > 2);
@@ -67,7 +68,7 @@ void main(void)
 					//se coloca un limite de coordenadas o si tiene algún valor ya dentro.
 					if(matriz[fila][col] == 'x' || matriz[fila][col] == 'o' || fila > 2 || col > 2)
 					{
-						printf("\nCoordernadas invalidas o ya hay un valor\n");
+						printf("\nCoordernadas invalidas o ya hay un valor.\n");
 						printf("Intente nuevamente. \n");
 					}
 				} while(matriz[fila][col] == 'x' || matriz[fila][col] == 'o' || fila > 2 || col > 2);
@@ -84,7 +85,8 @@ void main(void)
 				turno++;
 			}
 			//Evaluación de las matrices	
-			//1P
+			if(turno < 10){ //si el turno es menor evalúa lo sig.
+				//1P
 				if(matriz[0][0] == 'x' && matriz[0][0] == matriz[0][1] && matriz[0][0] == matriz[0][2] //1L H
 				|| matriz[1][0] == 'x' && matriz[1][0] == matriz[1][1] && matriz[1][0] == matriz[1][2] //2L H
 				|| matriz[2][0] == 'x' && matriz[2][0] == matriz[2][1] && matriz[2][0] == matriz[2][2] //3L H
@@ -113,7 +115,12 @@ void main(void)
 				{
 					ganador = 1;
 					printf("\n¡Felicidades!, Gano el jugador 2. \n");
-				}	
+				}
+			} 
+			else{ //si el turno es mayor a 10 entonces se define como empate.
+				printf("Es un empate.");
+				ganador = 1;
+			}	
 		} while(ganador != 1);
 	}
 }
