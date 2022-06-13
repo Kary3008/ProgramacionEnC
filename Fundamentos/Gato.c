@@ -40,6 +40,7 @@ void main(void)
 		do{
 			if(turno%2 == 1){
 				do{	
+					system("color a");
 					printf("\n\tJugador 1\n\n");
 					printf("Digite fila [abajo] (0-2): ");
 					scanf("%d", &fila);
@@ -68,6 +69,7 @@ void main(void)
 				
 			} else if(turno%2 == 0)	{
 				do{
+					system("color 6");
 					printf("\n\tJugador 2\n\n");
 					printf("Digite fila [abajo] (0-2): ");
 					scanf("%d", &fila);
