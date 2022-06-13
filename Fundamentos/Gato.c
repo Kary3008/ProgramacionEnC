@@ -1,3 +1,11 @@
+/*
+	Name: Juego del Gato
+	Copyright: @KarydNa9
+	Author: Karina Bautista Bautista
+	Date: 11/06/22 18:40
+	Description: Realizar un juego del Gato en C.
+*/
+
 #include<stdlib.h>
 #include<stdio.h>
 
