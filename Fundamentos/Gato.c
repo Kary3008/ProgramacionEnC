@@ -27,8 +27,8 @@ void main(void)
 	
 	if(opc == 's' || opc == 'S'){
 		printf("\nInstrucciones: \n");
-		printf("Escoge una fila (vertical) del 0 al 2, y escoge una columna(horizontal) del 0 al 2");
-		printf("Jugador 1: x, Jugador 2: o");
+		printf("Escoge una fila (vertical) del 0 al 2, y escoge una columna(horizontal) del 0 al 2.\n");
+		printf("Jugador 1: x, Jugador 2: o\n");
 		do{
 			if(turno%2 == 1){
 				do{	
