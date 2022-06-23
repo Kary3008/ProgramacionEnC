@@ -30,7 +30,7 @@ char others(){
     char selection[1];
     while(1){
         printf("Enter y to Return To Main Menu, Enter n To Exit The Program:");
-        scanf("%s", &selection);
+        scanf("%c", &selection);
         if (selection[0] == 'y' || selection[0] == 'n'){
             return selection[0];
             break;
@@ -42,14 +42,14 @@ char others(){
     }
 }
 
-int gen_id(){
+int gen_id(){ //check out
     int i, id;
     FILE * f = fopen("genid.txt", "r");
     FILE * ft = fopen("newidgen.txt", "w");
     while(!feof(f)){
             fscanf(f,"%d",&id);
     }
-    id++;
+    i++;
     fprintf(ft, "%d", id);
     fclose(ft);
     fclose(f);
@@ -59,7 +59,7 @@ int gen_id(){
 }
 
 void add_task(){
-    int id = gen_id();
+    int id = gen_id(); //up function
     int day, month, year;
     char name[30], category[30];
     char status[20] = "pending";
@@ -325,7 +325,7 @@ void view_all_task(){
 			    token = strtok(NULL, ":");
 		        printf("\t%s\t%-30s\t%-30s\t%d/%d/%d\t\t%-20s\t%-100s\n", record_list[i].id, record_list[i].name, record_list[i].category, record_list[i].year, record_list[i].month, record_list[i].day, record_list[i].status, record_list[i].remark);
                 i++;
-        }
+        }      
     }
     fclose(fp);
 }
